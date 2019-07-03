@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:text="Word To Find"
+        android:text="GJENI FJALËN"
         android:textSize="22sp"
         android:textStyle="bold" />
 
@@ -36,7 +36,7 @@
         android:layout_below="@id/wordEnteredTv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:text="Validate"
+        android:text="Valido"
         tools:ignore="UnknownId" />
 
     <Button
@@ -46,5 +46,5 @@
         android:layout_below="@id/validate"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:text="New Game" />
+        android:text="Lojë e re" />
 </RelativeLayout>
