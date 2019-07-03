@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+
+    tools:context=".MainActivity"
+
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:theme = "@style/AppTheme"
+    android:background="@drawable/f">
+
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editEmail"
+        android:layout_marginTop="100dp"
+        android:drawableLeft="@drawable/ic_action_user"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:visibility="visible"
+        tools:visibility="visible"
+        android:textColorHint="#FFFFFF"/>
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editUsername"
+        android:layout_marginTop="70dp"
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editPassword"
+        android:layout_marginTop="66dp"
+        android:background="#9E2354"
+        android:text="LOGIN"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+
+
+
+</RelativeLayout>
