@@ -12,49 +12,49 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView wordTv;
-    private EditText wordEnteredTv;
-    private Button validate, newGame;
-    private String wordToFind;
+    private TextView fjalaTv;
+    private EditText fjalaShtypurTv;
+    private Button valido, lojeRe;
+    private String fjalaMeGjet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        wordTv = (TextView) findViewById(R.id.wordTv);
-        wordEnteredTv = (EditText) findViewById(R.id.wordEnteredEt);
-        validate = (Button) findViewById(R.id.validate);
-        validate.setOnClickListener(this);
-        newGame = (Button) findViewById(R.id.newGame);
-        newGame.setOnClickListener(this);
+        fjalaTv = (TextView) findViewById(R.id.fjalaTv);
+        fjalaShtypurTv = (EditText) findViewById(R.id.fjalaShtypurEt);
+        valido = (Button) findViewById(R.id.valido);
+        valido.setOnClickListener(this);
+        lojeRe = (Button) findViewById(R.id.lojeRe);
+        lojeRe.setOnClickListener(this);
 
-        newGame();
+        lojeRe();
     }
 
     @Override
     public void onClick(View view) {
-        if (view == validate) {
-            validate();
-        } else if (view == newGame) {
-            newGame();
+        if (view == valido) {
+            valido();
+        } else if (view == lojeRe) {
+            lojeRe();
         }
     }
 
-    private void validate() {
-        String w = wordEnteredTv.getText().toString();
+    private void valido() {
+        String w = fjalaShtypurTv.getText().toString();
 
-        if (wordToFind.equals(w)) {
-            Toast.makeText(this, "Congratulations ! You found the word " + wordToFind, Toast.LENGTH_SHORT).show();
-            newGame();
+        if (fjalaMeGjet.equals(w)) {
+            Toast.makeText(this, "Urime! Ti e gjete fjalen " + fjalaMeGjet, Toast.LENGTH_SHORT).show();
+            lojeRe();
         } else {
-            Toast.makeText(this, "Retry !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Provoni perseri!", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void newGame() {
-        wordToFind = Anagram.randomFjala();
-        String wordShuffled = Anagram.shuffleFjala(wordToFind);
-        wordTv.setText(wordShuffled);
-        wordEnteredTv.setText("");
+    private void lojeRe() {
+        fjalaMeGjet = Anagram.randomFjala();
+        String fjalaPerzier = Anagram.shuffleFjala(fjalaMeGjet);
+        fjalaTv.setText(fjalaPerzier);
+        fjalaShtypurTv.setText("");
     }
 }
