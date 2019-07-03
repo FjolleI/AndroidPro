@@ -9,7 +9,7 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/wordTv"
+        android:id="@+id/fjalaTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -20,7 +20,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/wordEnteredEt"
+        android:id="@+id/inputEt"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/wordTv"
@@ -30,7 +30,7 @@
         tools:ignore="UnknownId" />
 
     <Button
-        android:id="@+id/validate"
+        android:id="@+id/valido"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/wordEnteredTv"
@@ -40,10 +40,10 @@
         tools:ignore="UnknownId" />
 
     <Button
-        android:id="@+id/newGame"
+        android:id="@+id/newG"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/validate"
+        android:layout_below="@id/valido"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:text="Lojë e re" />
