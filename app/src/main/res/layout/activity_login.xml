@@ -15,7 +15,7 @@
     android:paddingRight="16dp"
 
     android:paddingBottom="16dp"
-    tools:context=".Login2">
+    tools:context=".MainActivity">
 
 
     <EditText

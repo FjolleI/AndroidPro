@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="wordTv" type="id" />
     <item name="wordEnteredTv" type="id" />
-    <item name="fjalaTv" type="id" />
-    <item name="fjalaShtypurEt" type="id" />
-    <item name="valido" type="id" />
-    <item name="lojeRe" type="id" />
 </resources>
