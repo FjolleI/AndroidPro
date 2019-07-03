@@ -1,5 +1,7 @@
 package com.fiek.androidapp;
 
+
+
 import android.content.Context;
 
 import androidx.test.InstrumentationRegistry;
@@ -22,6 +24,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.fiek.androidapp", appContext.getPackageName());
+        assertEquals("com.fiek.anagram", appContext.getPackageName());
     }
 }
