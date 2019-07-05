@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    android:background="@drawable/o">
 
     <TextView
         android:id="@+id/fjalaTv"
@@ -16,6 +17,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:text="GJEJ FJALËN"
+        android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold" />
 
@@ -26,7 +28,8 @@
         android:layout_alignTop="@+id/fjalaTv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
-        android:inputType="textCapCharacters" />
+        android:inputType="textCapCharacters"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/valido"
@@ -35,6 +38,7 @@
         android:layout_below="@id/wordEnteredTv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
+        android:background="#B79F2555"
         android:text="VALIDO"
         tools:ignore="UnknownId" />
 
@@ -45,6 +49,7 @@
         android:layout_below="@id/valido"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
+        android:background="#D09F2555"
         android:text="LOJË E RE" />
 
 </RelativeLayout>

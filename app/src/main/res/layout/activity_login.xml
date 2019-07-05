@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editPassword"
         android:layout_marginTop="67dp"
-        android:background="#BC4566"
+        android:background="#E9BC4566"
         android:text="LOGIN"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
