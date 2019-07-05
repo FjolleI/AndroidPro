@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.fiek.androidapp.Model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
@@ -83,7 +84,12 @@ public class Login2 extends AppCompatActivity {
             editTextPhone.requestFocus();
             return;
         }
-
+        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                phone,
+                60,
+                TimeUnit.SECONDS,
+                this,
+                mCallbacks);
     }
     private void verifySignInCode(){
         String code = getEditTextCode.getText().toString();
@@ -108,7 +114,24 @@ public class Login2 extends AppCompatActivity {
                     }
                 });
     }
+    PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+        @Override
+        public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
 
+        }
+
+        @Override
+        public void onVerificationFailed(FirebaseException e) {
+
+        }
+
+        @Override
+        public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+            super.onCodeSent(s, forceResendingToken);
+
+            codeSent = s;
+        }
+    };
 
     private void signIn(final String username,final String password) {
         users.addListenerForSingleValueEvent(new ValueEventListener() {
