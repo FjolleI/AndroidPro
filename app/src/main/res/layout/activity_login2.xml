@@ -78,6 +78,15 @@
             android:inputType="phone"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
+        <Button
+            android:id="@+id/buttonGetCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9F2555"
+            android:text="Merr kodin verifikues"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            />
 
     </LinearLayout>
 
