@@ -6,15 +6,24 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.fiek.androidapp.Model.User;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.concurrent.TimeUnit;
 
 
 public class Login2 extends AppCompatActivity {
@@ -26,8 +35,8 @@ public class Login2 extends AppCompatActivity {
     Button buttonLogin;
 
     EditText editTextPhone, getEditTextCode;
-
-
+    FirebaseAuth mAuth;
+    String codeSent;
 
 
     @Override
@@ -38,7 +47,7 @@ public class Login2 extends AppCompatActivity {
         editTextPhone = findViewById(R.id.editTextPhone);
         getEditTextCode = findViewById(R.id.editTextCode);
 
-
+        mAuth = FirebaseAuth.getInstance();
 
         findViewById(R.id.buttonGetCode).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +83,32 @@ public class Login2 extends AppCompatActivity {
             editTextPhone.requestFocus();
             return;
         }
+
     }
+    private void verifySignInCode(){
+        String code = getEditTextCode.getText().toString();
+        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(codeSent, code);
+        signInWithPhoneAuthCredential(credential);
+    }
+
+    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(),"Login with code Successful",Toast.LENGTH_LONG).show();
+                        } else {
+                            if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
+
+                                Toast.makeText(getApplicationContext(),"Incorrect verification code",Toast.LENGTH_LONG).show();
+
+                            }
+                        }
+                    }
+                });
+    }
+
 
     private void signIn(final String username,final String password) {
         users.addListenerForSingleValueEvent(new ValueEventListener() {
