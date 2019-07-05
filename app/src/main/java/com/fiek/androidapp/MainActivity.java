@@ -51,7 +51,7 @@ int counter;
         if (fjalaMeGjet.equals(w)) {
 
             counter++;
-            Toast.makeText(this, "Urime! Ti e gjete fjalen " + fjalaMeGjet + "nr i fjaleve te gjetura " + counter, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Urime! Ju e gjetet fjalen " + fjalaMeGjet + " Nr i fjaleve te gjetura " + counter, Toast.LENGTH_SHORT).show();
             lojeRe();
         } else {
             Toast.makeText(this, "Provoni perseri!", Toast.LENGTH_SHORT).show();
