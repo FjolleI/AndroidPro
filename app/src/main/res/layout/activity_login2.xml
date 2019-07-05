@@ -87,7 +87,15 @@
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             />
-
+        <EditText
+            android:id="@+id/editTextCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="+0123456789"
+            android:hint="Jep kodin"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
     </LinearLayout>
 
 
