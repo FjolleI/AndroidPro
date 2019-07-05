@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //firebsae
+        //firebase
 
         database = FirebaseDatabase.getInstance();
         users = database.getReference("Users");
@@ -65,10 +65,9 @@ public class Login extends AppCompatActivity {
                             Toast.makeText(Login.this, "The Username already exists!", Toast.LENGTH_SHORT).show();
                         } else {
                             users.child(user.getUsername()).setValue(user);
-                            Toast.makeText(Login.this, "Successfully Registertered!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "Successfully Registered!", Toast.LENGTH_SHORT).show();
                         }
                     }
-
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {

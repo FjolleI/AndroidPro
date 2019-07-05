@@ -55,13 +55,49 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editPassword"
-        android:layout_marginTop="66dp"
-        android:background="#9E2354"
+        android:layout_marginTop="160dp"
+        android:background="#CD9E2354"
         android:text="LOGIN"
         android:textAllCaps="false"
         android:textColor="#FFFFFF" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_below="@+id/editPassword">
 
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:digits="+0123456789"
+            android:hint="Nr i telefonit"
+            android:inputType="phone"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/buttonGetCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D59F2555"
+            android:text="Merr kodin verifikues"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/editTextCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="+0123456789"
+            android:hint="Kodi"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+    </LinearLayout>
 
 
 </RelativeLayout>
