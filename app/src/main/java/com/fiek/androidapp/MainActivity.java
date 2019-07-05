@@ -1,5 +1,7 @@
 package com.fiek.androidapp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText fjalaShtypurTv;
     private Button valido, lojeRe;
     private String fjalaMeGjet;
+int counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lojeRe();
     }
 
+
+
     @Override
     public void onClick(View view) {
         if (view == valido) {
@@ -44,7 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String w = fjalaShtypurTv.getText().toString();
 
         if (fjalaMeGjet.equals(w)) {
-            Toast.makeText(this, "Urime! Ti e gjete fjalen " + fjalaMeGjet, Toast.LENGTH_SHORT).show();
+
+            counter++;
+            Toast.makeText(this, "Urime! Ti e gjete fjalen " + fjalaMeGjet + "nr i fjaleve te gjetura " + counter, Toast.LENGTH_SHORT).show();
             lojeRe();
         } else {
             Toast.makeText(this, "Provoni perseri!", Toast.LENGTH_SHORT).show();
