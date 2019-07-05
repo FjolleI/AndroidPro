@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText fjalaShtypurTv;
     private Button valido, lojeRe;
     private String fjalaMeGjet;
-int counter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,8 @@ int counter;
 
         if (fjalaMeGjet.equals(w)) {
 
-            counter++;
-            Toast.makeText(this, "Urime! Ju e gjetet fjalen " + fjalaMeGjet + " Nr i fjaleve te gjetura " + counter, Toast.LENGTH_SHORT).show();
+
+            Toast.makeText(this, "Urime! Ju e gjetet fjalen " + fjalaMeGjet , Toast.LENGTH_SHORT).show();
             lojeRe();
         } else {
             Toast.makeText(this, "Provoni perseri!", Toast.LENGTH_SHORT).show();
