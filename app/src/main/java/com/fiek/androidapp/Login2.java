@@ -71,6 +71,8 @@ public class Login2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 signIn(editUsername.getText().toString(), editPassword.getText().toString());
+                verifySignInCode();
+                Toast.makeText(getApplicationContext(),"Sukses",Toast.LENGTH_LONG).show();
             }
         });
     }

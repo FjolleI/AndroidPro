@@ -55,7 +55,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editPassword"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="160dp"
         android:background="#9E2354"
         android:text="LOGIN"
         android:textAllCaps="false"
