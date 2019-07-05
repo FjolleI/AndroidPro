@@ -69,6 +69,15 @@
         android:padding="15dp"
         android:layout_below="@+id/editPassword">
 
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:digits="+0123456789"
+            android:hint="Enter phone"
+            android:inputType="phone"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
 
     </LinearLayout>
 
