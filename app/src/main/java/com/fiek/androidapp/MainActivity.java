@@ -1,7 +1,5 @@
 package com.fiek.androidapp;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText fjalaShtypurTv;
     private Button valido, lojeRe;
     private String fjalaMeGjet;
-int counter;
+    int counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +47,15 @@ int counter;
         String w = fjalaShtypurTv.getText().toString();
 
         if (fjalaMeGjet.equals(w)) {
-
             counter++;
-            Toast.makeText(this, "Urime! Ju e gjetet fjalen " + fjalaMeGjet + " Nr i fjaleve te gjetura " + counter, Toast.LENGTH_SHORT).show();
+
+            Toast.makeText(this, "Urime! Ju e gjetet fjalen " + fjalaMeGjet + " Nr i fjaleve te gjetura: "+counter, Toast.LENGTH_SHORT).show();
             lojeRe();
         } else {
             Toast.makeText(this, "Provoni perseri!", Toast.LENGTH_SHORT).show();
         }
     }
+
 
     private void lojeRe() {
         fjalaMeGjet = Anagram.randomFjala();
