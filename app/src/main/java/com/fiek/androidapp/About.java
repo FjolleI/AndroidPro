@@ -24,3 +24,23 @@ public class About extends AppCompatActivity {
         rlRate = (RelativeLayout) findViewById(R.id.rlRate);
         rlFeedback = (RelativeLayout) findViewById(R.id.rlFeedback);
         rlHelp = (RelativeLayout) findViewById(R.id.rlHelp);
+        rlRate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent s = new Intent(getApplicationContext(), Rate.class);
+                startActivity(s);
+                Toast.makeText(getApplicationContext(),"Rate",Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
+
+        rlFeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent s = new Intent(getApplicationContext(), Feedback.class);
+                startActivity(s);
+                Toast.makeText(getApplicationContext(),"Feedback",Toast.LENGTH_LONG).show();
+            }
+        });
