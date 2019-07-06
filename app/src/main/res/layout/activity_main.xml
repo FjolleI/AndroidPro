@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
-    android:background="@drawable/o">
+    android:background="@drawable/d">
 
     <TextView
         android:id="@+id/fjalaTv"
@@ -16,8 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:text="GJEJ FJALËN"
-        android:textColor="#FFFFFF"
+        android:textColor="#A9476E"
         android:textSize="22sp"
         android:textStyle="bold" />
 

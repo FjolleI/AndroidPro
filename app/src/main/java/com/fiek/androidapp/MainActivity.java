@@ -31,9 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         lojeRe();
     }
-
-
-
     @Override
     public void onClick(View view) {
         if (view == valido) {
@@ -42,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             lojeRe();
         }
     }
-
     private void valido() {
         String w = fjalaShtypurTv.getText().toString();
 
@@ -55,8 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "Provoni perseri!", Toast.LENGTH_SHORT).show();
         }
     }
-
-
     private void lojeRe() {
         fjalaMeGjet = Anagram.randomFjala();
         String fjalaPerzier = Anagram.shuffleFjala(fjalaMeGjet);

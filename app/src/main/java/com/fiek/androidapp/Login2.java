@@ -108,9 +108,7 @@ public class Login2 extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(),"Login with code Successful",Toast.LENGTH_LONG).show();
                         } else {
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
-
                                 Toast.makeText(getApplicationContext(),"Incorrect verification code",Toast.LENGTH_LONG).show();
-
                             }
                         }
                     }
@@ -119,22 +117,17 @@ public class Login2 extends AppCompatActivity {
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
         @Override
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-
         }
-
         @Override
         public void onVerificationFailed(FirebaseException e) {
-
         }
 
         @Override
         public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
             super.onCodeSent(s, forceResendingToken);
-
             codeSent = s;
         }
     };
-
     private void signIn(final String username,final String password) {
         users.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -155,10 +148,8 @@ public class Login2 extends AppCompatActivity {
                         Toast.makeText(Login2.this, "Username is not registered", Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
             }
         });
     }
