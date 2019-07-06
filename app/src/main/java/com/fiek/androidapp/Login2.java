@@ -57,7 +57,7 @@ public class Login2 extends AppCompatActivity {
             }
         });
 
-        //firebase
+
 
         database = FirebaseDatabase.getInstance();
         users = database.getReference("Users");
@@ -135,7 +135,7 @@ public class Login2 extends AppCompatActivity {
                         User login = dataSnapshot.child(username).getValue(User.class);
                         if(login.getPassword().equals(password)){
                             Toast.makeText(Login2.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
-                            Intent s = new Intent(getApplicationContext(), MainActivity.class);
+                            Intent s = new Intent(getApplicationContext(),Welcome.class);
                             startActivity(s);
                         }
                         else{

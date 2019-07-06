@@ -23,12 +23,10 @@ public class Rate extends AppCompatActivity {
         button=(Button)findViewById(R.id.button);
         btnBack=(Button)findViewById(R.id.btnBack);
 
-        //Performing action on Button Click
         button.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View arg0) {
-                //Getting the rating and displaying it on the toast
                 String rating=String.valueOf(ratingbar.getRating());
                 Toast.makeText(getApplicationContext(), rating, Toast.LENGTH_LONG).show();
             }
