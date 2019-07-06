@@ -17,7 +17,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:theme = "@style/AppTheme"
-    android:background="@drawable/d">
+    android:background="@drawable/a">
 
 
     <Button
@@ -52,17 +52,17 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="62dp"
-        android:layout_height="55dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="58dp"
         android:layout_marginTop="200dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="25dp"
         android:background="#9F2555"
         android:scaleType="fitStart"
         app:srcCompat="@drawable/ic_action_help"

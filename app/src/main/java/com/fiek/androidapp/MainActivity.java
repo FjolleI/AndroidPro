@@ -1,5 +1,6 @@
 package com.fiek.androidapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,11 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView fjalaTv;
+    private TextView fjalaTv, scoreTv;
     private EditText fjalaShtypurTv;
     private Button valido, lojeRe;
     private String fjalaMeGjet;
-    int counter;
+    int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +44,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String w = fjalaShtypurTv.getText().toString();
 
         if (fjalaMeGjet.equals(w)) {
-            counter++;
-
-            Toast.makeText(this, "Urime! Ju e gjetet fjalen " + fjalaMeGjet + " Nr i fjaleve te gjetura: "+counter, Toast.LENGTH_SHORT).show();
+            score++;
+            Toast.makeText(this, "Urime! Ju e gjetet fjalen " + fjalaMeGjet, Toast.LENGTH_SHORT).show();
             lojeRe();
+
         } else {
             Toast.makeText(this, "Provoni perseri!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+            intent.putExtra("SCORE", score);
+            startActivity(intent);
         }
     }
     private void lojeRe() {

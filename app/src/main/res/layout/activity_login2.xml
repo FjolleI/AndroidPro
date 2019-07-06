@@ -16,7 +16,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:theme = "@style/AppTheme"
-    android:background="@drawable/v">
+    android:background="@drawable/z">
 
 
     <EditText
@@ -76,8 +76,8 @@
             android:digits="+0123456789"
             android:hint="Nr i telefonit"
             android:inputType="phone"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
 
         <Button
             android:id="@+id/buttonGetCode"
@@ -95,8 +95,8 @@
             android:digits="+0123456789"
             android:hint="Kodi"
             android:inputType="number"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
     </LinearLayout>
 
 

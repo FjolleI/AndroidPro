@@ -72,7 +72,6 @@ public class Login2 extends AppCompatActivity {
             public void onClick(View v) {
                 signIn(editUsername.getText().toString(), editPassword.getText().toString());
                 verifySignInCode();
-                Toast.makeText(getApplicationContext(),"Sukses",Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -105,7 +104,6 @@ public class Login2 extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(),"Login with code Successful",Toast.LENGTH_LONG).show();
                         } else {
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                                 Toast.makeText(getApplicationContext(),"Incorrect verification code",Toast.LENGTH_LONG).show();

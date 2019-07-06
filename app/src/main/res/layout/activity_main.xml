@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
-    android:background="@drawable/d">
+    android:background="@drawable/z">
 
     <TextView
         android:id="@+id/fjalaTv"
@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
         android:inputType="textCapCharacters"
-        android:textColor="#FFFFFF" />
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/valido"
@@ -39,6 +39,7 @@
         android:layout_marginTop="200dp"
         android:background="#B79F2555"
         android:text="VALIDO"
+        android:textColor="#FFFFFF"
         tools:ignore="UnknownId" />
 
     <Button
@@ -49,6 +50,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:background="#D09F2555"
-        android:text="LOJË E RE" />
+        android:text="LOJË E RE"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>

@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    android:background="@drawable/f"
+    android:background="@drawable/z"
     android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
@@ -29,10 +29,10 @@
         android:ems="10"
         android:gravity="center"
         android:hint="Email"
-        android:textColorHint="#FFFFFF"
         android:inputType="textEmailAddress"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#FFFFFF" />
+        android:textColor="#000000"
+        android:textColorHint="#000000" />
 
     <EditText
         android:id="@+id/editUsername"
@@ -47,8 +47,8 @@
         android:hint="Username"
         android:inputType="textPersonName"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"/>
+        android:textColor="#000000"
+        android:textColorHint="#000000" />
 
     <EditText
         android:id="@+id/editPassword"
@@ -63,8 +63,8 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"/>
+        android:textColor="#000000"
+        android:textColorHint="#000000" />
 
     <Button
         android:id="@+id/buttonLogin"
