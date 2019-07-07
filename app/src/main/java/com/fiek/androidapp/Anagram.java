@@ -27,7 +27,6 @@ public class Anagram {
 
             return new String(a);
         }
-
         return fjala;
     }
 }
