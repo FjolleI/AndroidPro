@@ -7,7 +7,7 @@ public class Anagram {
     public static final String[] FJALET = {"ARRITJE", "AUDICION", "BANKA", "BRETKOSA", "DJE", "KAFSHE", "KIMIKE",
             "MESIM", "MOTI", "NDERMARRJE", "NESER", "NJERI", "ORA", "PAGESE", "PATIKA", "POLITIKE",
             "QEVERI", "SPITAL", "SOT", "SUBSTANCA",
-            "SHPEJTE", "TELEFON", "TOKA", "VENDKALIM",  };
+            "SHPEJTE", "TOKA", "VENDKALIM",  };
 
 
     public static String randomFjala() {
