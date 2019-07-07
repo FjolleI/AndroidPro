@@ -11,8 +11,8 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".MainActivity">
-
         </activity>
+
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,20 +21,26 @@
             </intent-filter>
 
         </activity>
+
         <activity android:name=".Login2">
         </activity>
 
         <activity android:name=".Welcome">
 
         </activity>
+
         <activity android:name=".GameOverActivity">
         </activity>
+
         <activity android:name=".Rate">
         </activity>
+
         <activity android:name=".About">
         </activity>
+
         <activity android:name=".Feedback">
         </activity>
+
     </application>
 
 </manifest>

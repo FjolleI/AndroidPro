@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.fiek.androidapp.R;
 
 public class Feedback extends AppCompatActivity {
+    Button btnCancel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,5 +31,14 @@ public class Feedback extends AppCompatActivity {
             }
         });
 
-    }
-}
+        btnCancel = (Button) findViewById(R.id.btnCancel);
+                btnCancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
+                    }
+                });
+
+            }
+        }
+
